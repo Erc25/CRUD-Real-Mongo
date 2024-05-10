@@ -1,0 +1,35 @@
+﻿<Window x:Class="EjemploCRUD.UI.Articulo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EjemploCRUD.UI"
+        mc:Ignorable="d"
+        Title="Articulo" Height="450" Width="800">
+    <Grid>
+        <DataGrid IsReadOnly="True" x:Name="ArticuloDataGrid" HorizontalAlignment="Left" Height="300" Margin="10,10,0,0" VerticalAlignment="Top" Width="780" MouseDoubleClick="ArticuloDataGrid_MouseDoubleClick"/>
+
+        <!-- Fila para los TextBox -->
+        <StackPanel Orientation="Horizontal" Margin="10,320,0,0">
+            <StackPanel Width="200" Orientation="Vertical">
+                <Label Content="Nombre:"/>
+                <TextBox x:Name="nombreTextBox" Margin="5" Width="180" Height="30" />
+            </StackPanel>
+            <StackPanel Width="200" Orientation="Vertical">
+                <Label Content="Precio:"/>
+                <TextBox x:Name="precioTextBox" Margin="5" Width="180" Height="30" />
+            </StackPanel >
+            <StackPanel Width="200" Orientation="Vertical">
+                <Label Content="Categoría"/>
+                <ComboBox SelectionChanged="categoriaComboBox_SelectionChanged" x:Name="categoriaComboBox" Margin="5" Width="180" Height="30"/>
+            </StackPanel>
+        </StackPanel>
+
+        <!-- Fila para los Botones -->
+        <StackPanel Orientation="Horizontal" Margin="10,380,0,0">
+            <Button x:Name="btnInsertar" Content="Insertar Categoría" Click="btnInsertar_Click" Width="150" Height="40" Margin="5"/>
+            <Button x:Name="btnEliminar" Content="Eliminar Categoría" Click="btnEliminar_Click" Width="150" Height="40" Margin="5"/>
+            <Button x:Name="btnEditar" Content="Editar Categoría" Click="btnEditar_Click" Width="150" Height="40" Margin="5"/>
+        </StackPanel>
+    </Grid>
+</Window>
